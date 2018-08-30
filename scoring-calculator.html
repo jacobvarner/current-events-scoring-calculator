@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Current Events Scoring Calculator</title>
+  <meta name="author" content="Jacob Varner">
+  <meta name="description" content="Sample scoring calculator for Current Events, the 2018 BEST Robotics game.">
+  <meta name="keywords" content="Auburn,Robotics,SCORE,STEM,Education,BEST,scoring,scores,calculator">
+  <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico">
+  <link rel="stylesheet" href="assets/styles/normalize.css">
+  <link rel="stylesheet" href="scores.css">
+  <script src="scores.js"></script>
+</head>
+
+<body>
+  <div id="header-container">
+    <img src="logo.png" alt="Current Events Logo" />
+  </div>
+  <div id="scorecard-container">
+    <h1 id="scorecard-header">Sample Scoresheet</h1>
+    <div id="flow-analysis-container">
+      <h3 id="flow-analysis-heading" class="sub-heading">Duck Current Flow Analysis: <span>(click one)</span></h3>
+      <div id="late-option">
+        <p id="late-header">Late?</p>
+        <input id="late-checkbox" onclick="toggleLate()" type="checkbox" name="late">
+      </div>
+      <div id="flow-analysis-options">
+        <div class="flow-analysis-option" id="flow-a" onclick="setLetter('A')">
+          <p class="flow-analysis-option-value">A</p>
+        </div>
+        <div class="flow-analysis-option" id="flow-b" onclick="setLetter('B')">
+          <p class="flow-analysis-option-value">B</p>
+        </div>
+        <div class="flow-analysis-option" id="flow-c" onclick="setLetter('C')">
+          <p class="flow-analysis-option-value">C</p>
+        </div>
+        <div class="flow-analysis-option" id="flow-d" onclick="setLetter('D')">
+          <p class="flow-analysis-option-value">D</p>
+        </div>
+        <div class="flow-analysis-option" id="flow-e" onclick="setLetter('E')">
+          <p class="flow-analysis-option-value">E</p>
+        </div>
+        <div class="flow-analysis-option" id="flow-f" onclick="setLetter('F')">
+          <p class="flow-analysis-option-value">F</p>
+        </div>
+        <div class="flow-analysis-option" id="flow-g" onclick="setLetter('G')">
+          <p class="flow-analysis-option-value">G</p>
+        </div>
+        <div class="flow-analysis-option" id="flow-h" onclick="setLetter('H')">
+          <p class="flow-analysis-option-value">H</p>
+        </div>
+        <div class="flow-analysis-option" id="flow-i" onclick="setLetter('I')">
+          <p class="flow-analysis-option-value">I</p>
+        </div>
+        <div class="flow-analysis-option" id="flow-j" onclick="setLetter('J')">
+          <p class="flow-analysis-option-value">J</p>
+        </div>
+        <div class="flow-analysis-option" id="flow-k" onclick="setLetter('K')">
+          <p class="flow-analysis-option-value">K</p>
+        </div>
+        <div class="flow-analysis-option" id="flow-l" onclick="setLetter('L')">
+          <p class="flow-analysis-option-value">L</p>
+        </div>
+        <div class="flow-analysis-option" id="flow-m" onclick="setLetter('M')">
+          <p class="flow-analysis-option-value">M</p>
+        </div>
+        <div class="flow-analysis-option" id="flow-n" onclick="setLetter('N')">
+          <p class="flow-analysis-option-value">N</p>
+        </div>
+        <div class="flow-analysis-option" id="flow-o" onclick="setLetter('O')">
+          <p class="flow-analysis-option-value">O</p>
+        </div>
+        <div class="flow-analysis-option" id="flow-p" onclick="setLetter('P')">
+          <p class="flow-analysis-option-value">P</p>
+        </div>
+        <div class="flow-analysis-option" id="flow-q" onclick="setLetter('Q')">
+          <p class="flow-analysis-option-value">Q</p>
+        </div>
+        <div class="flow-analysis-option" id="flow-r" onclick="setLetter('R')">
+          <p class="flow-analysis-option-value">R</p>
+        </div>
+        <div class="flow-analysis-option" id="flow-s" onclick="setLetter('S')">
+          <p class="flow-analysis-option-value">S</p>
+        </div>
+        <div class="flow-analysis-option" id="flow-t" onclick="setLetter('T')">
+          <p class="flow-analysis-option-value">T</p>
+        </div>
+        <div class="flow-analysis-option" id="flow-u" onclick="setLetter('U')">
+          <p class="flow-analysis-option-value">U</p>
+        </div>
+        <div class="flow-analysis-option" id="flow-v" onclick="setLetter('V')">
+          <p class="flow-analysis-option-value">V</p>
+        </div>
+        <div class="flow-analysis-option" id="flow-w" onclick="setLetter('W')">
+          <p class="flow-analysis-option-value">W</p>
+        </div>
+        <div class="flow-analysis-option" id="flow-x" onclick="setLetter('X')">
+          <p class="flow-analysis-option-value">X</p>
+        </div>
+      </div>
+    </div>
+    <div id="sea-turtle-bonus-container">
+      <h3 id="sea-turtle-bonus-heading" class="sub-heading">Sea Turtle Bonus: <span>(click one)</span></h3>
+      <div class="sea-turtle-option" id="turtle-bonus-8oz" onclick="setSeaTurtleBonus('8oz')">
+        <p class="sea-turtle-option-value">8oz</p>
+      </div>
+      <div class="sea-turtle-option" id="turtle-bonus-16oz" onclick="setSeaTurtleBonus('16oz')">
+        <p class="sea-turtle-option-value">16oz</p>
+      </div>
+      <div class="sea-turtle-option" id="turtle-bonus-1L" onclick="setSeaTurtleBonus('1L')">
+        <p class="sea-turtle-option-value">1L</p>
+      </div>
+      <div class="sea-turtle-option" id="turtle-bonus-Microplastic" onclick="setSeaTurtleBonus('Microplastic')">
+        <p class="sea-turtle-option-value">Microplastic</p>
+      </div>
+    </div>
+    <div id="referee-counts-container">
+      <div id="item-column">
+        <p class="column-heading">Item</p>
+        <p class="item-column-value">Cans</p>
+        <p class="item-column-value">8oz Bottle</p>
+        <p class="item-column-value">16oz Bottle</p>
+        <p class="item-column-value">1L Bottle</p>
+        <p class="item-column-value">Microplastics</p>
+        <p class="item-column-value">Rubber Duckies</p>
+        <p class="item-column-value">Turtles</p>
+      </div>
+      <div id="count-column">
+        <p class="column-heading"># Remaining</p>
+        <input type="number" id="collected-cans" onchange="updateCollected('cans')" value="0" min="0" max="32" class="number-collected"
+          name="number-collected">
+        <input type="number" id="collected-8oz" onchange="updateCollected('8oz')" value="0" min="0" max="32" class="number-collected"
+          name="number-collected">
+        <input type="number" id="collected-16oz" onchange="updateCollected('16oz')" value="0" min="0" max="32" class="number-collected"
+          name="number-collected">
+        <input type="number" id="collected-1L" onchange="updateCollected('1L')" value="0" min="0" max="32" class="number-collected"
+          name="number-collected">
+        <input type="number" id="collected-microplastics" onchange="updateCollected('microplastics')" value="0" min="0" max="160"
+          class="number-collected" name="number-collected">
+        <input type="number" id="collected-duckies" onchange="updateCollected('duckies')" value="0" min="0" max="8" class="number-collected"
+          name="number-collected">
+        <input type="number" id="collected-turtles" onchange="updateCollected('turtles')" value="0" min="0" max="4" class="number-collected"
+          name="number-collected">
+      </div>
+      <div id="reef-count-column">
+        <p class="column-heading"># Reefs Completed</p>
+        <input type="number" id="completed-cans" onchange="updateCompleted('cans')" value="0" min="0" max="6" class="reef-boxes-complete"
+          name="reef-boxes-complete">
+        <input type="number" id="completed-8oz" onchange="updateCompleted('8oz')" value="0" min="0" max="6" class="reef-boxes-complete"
+          name="reef-boxes-complete">
+        <input type="number" id="completed-16oz" onchange="updateCompleted('16oz')" value="0" min="0" max="6" class="reef-boxes-complete"
+          name="reef-boxes-complete">
+        <input type="number" id="completed-1L" onchange="updateCompleted('1L')" value="0" min="0" max="3" class="reef-boxes-complete"
+          name="reef-boxes-complete">
+        <input type="number" id="completed-microplastics" onchange="updateCompleted('microplastics')" value="0" min="0" max="4" class="reef-boxes-complete"
+          name="reef-boxes-complete">
+      </div>
+      <div id="reef-installed-column">
+        <p class="column-heading"># Reefs Installed</p>
+        <input type="number" id="installed-cans" onchange="updateInstalled('cans')" value="0" min="0" max="6" class="reef-boxes-installed"
+          name="reef-boxes-installed">
+        <input type="number" id="installed-8oz" onchange="updateInstalled('8oz')" value="0" min="0" max="6" class="reef-boxes-installed"
+          name="reef-boxes-installed">
+        <input type="number" id="installed-16oz" onchange="updateInstalled('16oz')" value="0" min="0" max="6" class="reef-boxes-installed"
+          name="reef-boxes-installed">
+        <input type="number" id="installed-1L" onchange="updateInstalled('1L')" value="0" min="0" max="3" class="reef-boxes-installed"
+          name="reef-boxes-installed">
+        <input type="number" id="installed-microplastics" onchange="updateInstalled('microplastics')" value="0" min="0" max="4" class="reef-boxes-installed"
+          name="reef-boxes-installed">
+      </div>
+    </div>
+    <div id="total-container">
+      <h3 id="flexibility-heading">Flexibility Bonus
+        </h2>
+        <span class="flexibility-option" id="flexibility-option-A">A</span>
+        <span class="flexibility-option" id="flexibility-option-B">B</span>
+        <span class="flexibility-option" id="flexibility-option-C">C</span>
+        <p id="flexibility-score">0</p>
+    </div>
+    <div id="total-container">
+      <h2 id="total-heading">Total Score</h2>
+      <p id="total-score">0</p>
+      <button id="clear-form" onclick="clearScoresheet()">Clear Scoresheet</button>
+    </div>
+  </div>
+  <div id="scoring-notes-container">
+    <p id="scoring-notes">* This calculator is to aid teams in planning for scenarios and figuring out how scoring works.
+      While we have tried to make this as accurate as possible, scoring from the official scoring system at competition will
+      be considered more accurate than this calculator. This calculator cannot account for judgements made by referees and
+      other factors.</p>
+    <p id="scoring-notes">** The "Current Flow Analysis" for this calculator assumes that any selected letter is the correct
+      letter as long as it is not marked late. In the real game, this will only award the points if the guessed letter is
+      correctly selected and is not deemed late.</p>
+    <p id="scoring-notes">*** The "Flexibility Bonus" indicator on the this calculator is just to indicate which bonus have
+      been triggered and will not need to be checked during the actual game. These scenarios can be found in section 6.4
+      of the game rules.</p>
+    <p id="scoring-notes">**** A turtle must be scored in order for the Sea Turtle Bonus to actually take effect.</p>
+  </div>
+</body>
+
+</html>
